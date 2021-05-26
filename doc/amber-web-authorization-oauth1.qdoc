@@ -1,0 +1,23 @@
+/****************************************************************************
+**
+** Copyright (c) 2021 Open Mobile Platform LLC
+**
+****************************************************************************/
+
+/*!
+  \qmltype OAuth1
+  \instantiates Amber::Web::Authorization::OAuth1
+  \inqmlmodule Amber.Web.Authorization
+  \ingroup amber-web-authorization
+  \brief A helper for OAuth1 flows.
+
+  The \l{Amber::Web::Authorization::OAuth1} type is exposed to QML as
+  \c{OAuth1} in the \c{Amber.Web.Authorization} QML import namespace.
+
+  Clients will most likely want to use the \l{OAuth10a} helper instead of
+  this \l{OAuth1} helper, as it also includes a
+  \l{Amber::Web::Authorization::RedirectListener}{RedirectListener}.
+
+  \sa OAuth10a
+*/
+

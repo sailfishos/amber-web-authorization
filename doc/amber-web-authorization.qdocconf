@@ -1,0 +1,56 @@
+project         = Amber Web Authorization Framework
+description     = Amber Web Authorization Framework Reference Documentation
+versionsym      =
+version         = 1.0.0
+url             = https://github.com/sailfishos/amber-web-authorization/
+
+sourcedirs += $$PWD/../lib $$PWD/../import $$PWD/../doc
+headerdirs += $$PWD/../lib $$PWD/../import
+exampledirs += $$PWD/../examples
+
+outputformats = HTML
+outputdir = $$PWD/../doc/html
+base = file:$$PWD/../doc/html
+tagfile = $$PWD/../doc/html/amber-web-authorization.tags
+
+outputprefixes = QML
+outputprefixes.QML = qml-amber-web-authorization-
+
+qhp.projects = AmberWebAuthorization
+
+qhp.AmberWebAuthorization.file = amber-web-authorization.qhp
+qhp.AmberWebAuthorization.namespace = org.sailfishos.amber.web.authorization.1.0.0
+qhp.AmberWebAuthorization.virtualFolder = amber.web.authorization
+qhp.AmberWebAuthorization.indexTitle = Amber Web Authorization Framework
+qhp.AmberWebAuthorization.indexRoot =
+
+qhp.AmberWebAuthorization.filterAttributes = amber-web-authorization 1.0.0
+qhp.AmberWebAuthorization.customFilters.AmberWebAuthorization.name = Amber Web Authorization 1.0.0
+qhp.AmberWebAuthorization.customFilters.AmberWebAuthorization.filterAttributes = amber-web-authorization 1.0.0
+
+qhp.AmberWebAuthorization.subprojects = overview qmltypes classes
+
+qhp.AmberWebAuthorization.subprojects.overview.title = Amber Web Authorization Framework
+qhp.AmberWebAuthorization.subprojects.overview.indexTitle = Amber Web Authorization Framework
+qhp.AmberWebAuthorization.subprojects.overview.type = manual
+qhp.AmberWebAuthorization.subprojects.qmltypes.title = QML Types
+qhp.AmberWebAuthorization.subprojects.qmltypes.indexTitle = Amber.Web.Authorization QML Types
+qhp.AmberWebAuthorization.subprojects.qmltypes.selectors = qmlclass
+qhp.AmberWebAuthorization.subprojects.qmltypes.sortPages = true
+qhp.AmberWebAuthorization.subprojects.classes.title = C++ Classes
+qhp.AmberWebAuthorization.subprojects.classes.indexTitle = Amber Web Authorization C++ Classes
+qhp.AmberWebAuthorization.subprojects.classes.selectors = class fake:headerfile
+qhp.AmberWebAuthorization.subprojects.classes.sortPages = true
+
+HTML.footer += \
+    "<div class=\"footer\">\n" \
+    "  <p><acronym title=\"Copyright\">&copy;</acronym> 2021 Open Mobile Platform LLC.</p>\n" \
+    "  <p>All other trademarks are property of their respective owners.</p>\n" \
+    "  <p>\n" \
+    "    This document may be used under the terms of the " \
+    "    <a href=\"http://www.gnu.org/licenses/fdl.html\">GNU Free Documentation License version 1.3</a>" \
+    "    as published by the Free Software Foundation." \
+    "  </p>\n" \
+    "</div>\n"
+
+navigation.homepage = "Amber Web Authorization Framework"
