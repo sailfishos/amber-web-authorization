@@ -9,7 +9,6 @@ BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Network)
 BuildRequires: pkgconfig(Qt5Qml)
 BuildRequires: pkgconfig(Qt5Quick)
-BuildRequires: pkgconfig(sailfishsilica)
 BuildRequires: qt5-qttools
 BuildRequires: qt5-qttools-linguist
 Requires: libamberwebauthorization = %{version}
@@ -36,6 +35,7 @@ BuildRequires: qt5-tools
 %package examples
 Summary:  Example applications which use the Amber Web Authorization framework
 Requires: %{name} = %{version}
+Requires: sailfishsilica-qt5
 
 %description examples
 %{summary}.
