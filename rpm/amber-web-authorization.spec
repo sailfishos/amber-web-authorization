@@ -1,7 +1,7 @@
 Name: amber-web-authorization
 License: BSD
 Url:     https://github.com/sailfishos/amber-web-authorization
-Version: 1.0.0
+Version: 1.0.1
 Release: 1
 Source0: %{name}-%{version}.tar.bz2
 Summary: Components to provide common OAuth flows
