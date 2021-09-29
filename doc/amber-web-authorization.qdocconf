@@ -30,8 +30,8 @@ qhp.AmberWebAuthorization.customFilters.AmberWebAuthorization.filterAttributes =
 
 qhp.AmberWebAuthorization.subprojects = overview qmltypes classes
 
-qhp.AmberWebAuthorization.subprojects.overview.title = Amber Web Authorization Framework
-qhp.AmberWebAuthorization.subprojects.overview.indexTitle = Amber Web Authorization Framework
+qhp.AmberWebAuthorization.subprojects.overview.title = Amber Web Authorization Framework Overview
+qhp.AmberWebAuthorization.subprojects.overview.indexTitle = Amber Web Authorization Framework Overview
 qhp.AmberWebAuthorization.subprojects.overview.type = manual
 qhp.AmberWebAuthorization.subprojects.qmltypes.title = QML Types
 qhp.AmberWebAuthorization.subprojects.qmltypes.indexTitle = Amber.Web.Authorization QML Types
