@@ -69,7 +69,7 @@
   }
   \endcode
 
-  \sa OAuth2, \l{Amber::Web::Authorization::RedirectListener}{RedirectListener}
+  \sa OAuth2, {Amber::Web::Authorization::RedirectListener}{RedirectListener}
 */
 
 /*!
