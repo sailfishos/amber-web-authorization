@@ -33,6 +33,10 @@ ApplicationWindow {
                     }
                 }
 
+                // OAuth1.0a example using Twitter
+                // In the Twitter dev console under "Authentication settings" for your app ensure:
+                // 1. "3-legged OAuth" is enabled
+                // 2. "Callback urls" includes "http://127.0.0.1:7358" to match redirectListener.port below
                 OAuth10a {
                     id: twitterOAuth
 
@@ -44,6 +48,7 @@ ApplicationWindow {
                     requestTokenEndpoint: "https://api.twitter.com/oauth/request_token"
                     authorizeTokenEndpoint: "https://api.twitter.com/oauth/authorize"
                     accessTokenEndpoint: "https://api.twitter.com/oauth/access_token"
+                    redirectListener.port: 7358 // your app's localhost redirect port. Must be configured in Twitter too.
 
                     onErrorOccurred: console.log("Twitter OAuth1 Error: " + error.code + " = " + error.message + " : " + error.httpCode)
 
@@ -54,7 +59,7 @@ ApplicationWindow {
                     onReceivedAccessToken: {
                         console.log("Got access token: " + oauthToken + "; " + oauthTokenSecret)
                         xhr = authenticatedRequest("GET", "https://api.twitter.com/1.1/account/verify_credentials.json",
-                                                   oauth1.generateAuthorizationHeader(
+                                                   oauth.generateAuthorizationHeader(
                                                            oauthToken, oauthTokenSecret,
                                                            "GET", "https://api.twitter.com/1.1/account/verify_credentials.json"))
                     }
@@ -78,6 +83,7 @@ ApplicationWindow {
                     }
                 }
 
+                // OAuth2 example using Google
                 OAuth2AcPkce {
                     id: googleOAuth
 
@@ -122,4 +128,3 @@ ApplicationWindow {
         }
     }
 }
-
