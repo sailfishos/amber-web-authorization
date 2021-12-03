@@ -18,7 +18,7 @@
   and exposes the various properties which are required for the
   OAuth2 Authorize Code flow.
 
-  \sa OAuth2, \l{Amber::Web::Authorization::RedirectListener}{RedirectListener}
+  \sa OAuth2, {Amber::Web::Authorization::RedirectListener}{RedirectListener}
 */
 
 /*!

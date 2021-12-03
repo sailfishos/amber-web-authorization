@@ -185,7 +185,7 @@ void Amber::Web::Authorization::RedirectListener::setPort(int p)
   \property Amber::Web::Authorization::RedirectListener::uri
   \brief This property holds the full URI of the listener.
 
-  It will be of the form \c{"http://127.0.0.1:<port>/" where the \c{<port>}
+  It will be of the form \c{"http://127.0.0.1:<port>/"} where the \c{<port>}
   value will either be the \l{port} property value (if the client provided
   a valid port number via this property) or else an arbitrary valid port,
   which the helper was able to listen on.

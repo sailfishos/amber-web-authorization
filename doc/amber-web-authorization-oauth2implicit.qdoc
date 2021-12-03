@@ -21,7 +21,7 @@
   Note: the Implicit flow is not recommended for use by new clients,
   who should prefer to use the Authorization Code With PKCE flow instead.
 
-  \sa OAuth2, OAuth2AcPkce, \l{Amber::Web::Authorization::RedirectListener}{RedirectListener}
+  \sa OAuth2, OAuth2AcPkce, {Amber::Web::Authorization::RedirectListener}{RedirectListener}
 */
 
 /*!
