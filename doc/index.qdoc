@@ -95,8 +95,29 @@ CONFIG += link_pkgconfig
 PKGCONFIG += amberwebauthorization
 \endcode
 
-It may then \c{#include <oauth1.h>}, \c{#include <oauth2.h>},
-\c{#include <redirectlistener.h>} as required.
+You'll also need to add the following to your RPM SPEC file.
+
+\code
+BuildRequires:  pkgconfig(amberwebauthorization)
+\endcode
+
+If your project is using a YAML file to generate your SPEC file, don't edit
+your SPEC file, but instead amend the YAML file to add \c{amberwebauthorization}
+to the \c{PkgConfigBR} section, like this:
+
+\code
+PkgConfigBR:
+  - amberwebauthorization
+\endcode
+
+You can then use the headers in your code depending on the functionality you
+need access to. Refer to the class documentation for which headers to include.
+
+\code
+#include <oauth1.h>
+#include <oauth2.h>
+#include <redirectlistener.h>
+\endcode
 
 \section2 QML API
 
