@@ -88,12 +88,27 @@ implement its own redirect handling (e.g. with custom protocol).
 To use the C++ API, the client application should use the
 "amberwebauthorization.pc" pkgconfig file.
 
-e.g. in a qmake-based project:
+e.g. in a qmake-based project you should add the following line to your pro
+file:
+
+\code
+PKGCONFIG += amberwebauthorization
+\endcode
+
+In order for PkgConfig to work, you need to have either
+
+\code
+CONFIG += sailfishapp
+\endcode
+
+or
 
 \code
 CONFIG += link_pkgconfig
-PKGCONFIG += amberwebauthorization
 \endcode
+
+in your pro file. \b Note: You should only add either sailfishapp or
+link_pkgconfig, but not both.
 
 You'll also need to add the following to your RPM SPEC file.
 
