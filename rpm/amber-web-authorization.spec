@@ -58,6 +58,7 @@ Requires: libamberwebauthorization = %{version}-%{release}
 %{_datadir}/translations/amber_web_authorization_eng_en.qm
 %{_libdir}/qt5/qml/Amber/Web/Authorization/libamberwebauthorizationplugin.so
 %{_libdir}/qt5/qml/Amber/Web/Authorization/qmldir
+%{_libdir}/qt5/qml/Amber/Web/Authorization/plugins.qmltypes
 %{_libdir}/qt5/qml/Amber/Web/Authorization/*.qml
 %{_libdir}/qt5/qml/Amber/Web/Authorization/*.js
 
