@@ -1,8 +1,8 @@
-project         = Amber Web Authorization Framework
+project         = amber-web-authorization
 description     = Amber Web Authorization Framework Reference Documentation
 versionsym      =
 version         = 1.0.0
-url             = https://github.com/sailfishos/amber-web-authorization/
+url             = $BASE_URL/amber-web-authorization
 
 sourcedirs += $$PWD/../lib $$PWD/../import $$PWD/../doc
 headerdirs += $$PWD/../lib $$PWD/../import
@@ -45,6 +45,7 @@ qhp.AmberWebAuthorization.subprojects.classes.sortPages = true
 HTML.footer += \
     "<div class=\"footer\">\n" \
     "  <p><acronym title=\"Copyright\">&copy;</acronym> 2021 Open Mobile Platform LLC.</p>\n" \
+    "  <p><acronym title=\"Copyright\">&copy;</acronym> 2023 Jolla OY</p>\n" \
     "  <p>All other trademarks are property of their respective owners.</p>\n" \
     "  <p>\n" \
     "    This document may be used under the terms of the " \

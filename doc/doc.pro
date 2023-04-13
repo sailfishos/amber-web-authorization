@@ -1,10 +1,10 @@
 TEMPLATE = aux
 
-CONFIG += mer-qdoc-template
-MER_QDOC.project = amber-web-authorization
-MER_QDOC.config = amber-web-authorization.qdocconf
-MER_QDOC.style = offline
-MER_QDOC.path = /usr/share/doc/amber-web-authorization/
+CONFIG += sailfish-qdoc-template
+SAILFISH_QDOC.project = amber-web-authorization
+SAILFISH_QDOC.config = amber-web-authorization.qdocconf
+SAILFISH_QDOC.style = offline
+SAILFISH_QDOC.path = /usr/share/doc/amber-web-authorization/
 
 OTHER_FILES += \
     $$PWD/amber-web-authorization.qdocconf \
