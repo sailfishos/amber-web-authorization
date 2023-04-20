@@ -1,7 +1,7 @@
 Name: amber-web-authorization
 License: BSD
 Url:     https://github.com/sailfishos/amber-web-authorization
-Version: 1.0.1
+Version: 1.0.7
 Release: 1
 Source0: %{name}-%{version}.tar.bz2
 Summary: Components to provide common OAuth flows
@@ -25,7 +25,7 @@ Requires:  %{name} = %{version}
 
 %package doc
 Summary: Documentation for Amber Web Authorization framework
-BuildRequires: mer-qdoc-template
+BuildRequires: sailfish-qdoc-template
 BuildRequires: qt5-qttools-qthelp-devel
 BuildRequires: qt5-tools
 
@@ -95,6 +95,7 @@ Requires: libamberwebauthorization = %{version}-%{release}
 
 %install
 %qmake5_install
+install -m 644 doc/html/%{name}.index %{buildroot}/%{_docdir}/%{name}/
 
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
