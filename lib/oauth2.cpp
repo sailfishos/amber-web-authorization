@@ -910,7 +910,7 @@ void Amber::Web::Authorization::OAuth2::refreshAccessToken(const QString &refres
 {
     Q_D(OAuth2);
     if (d->m_flowType != AuthorizationCodeFlow
-            || d->m_flowType != AuthorizationCodeWithPkceFlow) {
+            && d->m_flowType != AuthorizationCodeWithPkceFlow) {
         d->m_error = Amber::Web::Authorization::Error(
                 Amber::Web::Authorization::Error::InvalidOperationError,
                 QStringLiteral("Can only refresh access tokens received via authorization_code flow"));
