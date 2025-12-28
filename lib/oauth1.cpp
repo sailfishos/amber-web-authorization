@@ -374,7 +374,6 @@ Amber::Web::Authorization::Error Amber::Web::Authorization::OAuth1::error() cons
 */
 QVariantMap Amber::Web::Authorization::OAuth1::parseRedirectUri(const QString &redirectUri)
 {
-    Q_D(OAuth1);
     QString errorMessage;
     const QVariantMap data = Amber::Web::Authorization::parseRedirectUri(redirectUri, &errorMessage);
     if (!errorMessage.isEmpty()) {
