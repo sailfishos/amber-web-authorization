@@ -53,39 +53,6 @@ Requires: libamberwebauthorization = %{version}-%{release}
 %description -n libamberwebauthorization-devel
 %{summary}.
 
-%files
-%defattr(-,root,root,-)
-%{_datadir}/translations/amber_web_authorization_eng_en.qm
-%{_libdir}/qt5/qml/Amber/Web/Authorization/libamberwebauthorizationplugin.so
-%{_libdir}/qt5/qml/Amber/Web/Authorization/qmldir
-%{_libdir}/qt5/qml/Amber/Web/Authorization/plugins.qmltypes
-%{_libdir}/qt5/qml/Amber/Web/Authorization/*.qml
-%{_libdir}/qt5/qml/Amber/Web/Authorization/*.js
-
-%files ts-devel
-%defattr(-,root,root,-)
-%{_datadir}/translations/source/amber_web_authorization.ts
-
-%files doc
-%defattr(-,root,root,-)
-%dir %{_datadir}/doc/amber-web-authorization
-%{_datadir}/doc/amber-web-authorization/*
-
-%files examples
-%defattr(-,root,root,-)
-%{_bindir}/amberwebauthcppexample
-%{_datadir}/amberwebauthqmlexample/amberwebauthqmlexample.qml
-
-%files -n libamberwebauthorization
-%defattr(-,root,root,-)
-%{_libdir}/libamberwebauthorization.so.*
-
-%files -n libamberwebauthorization-devel
-%defattr(-,root,root,-)
-%{_libdir}/libamberwebauthorization.so
-%{_libdir}/pkgconfig/amberwebauthorization.pc
-%{_includedir}/libamberwebauthorization/*
-
 %prep
 %autosetup -n %{name}-%{version}
 
@@ -99,6 +66,33 @@ install -m 644 doc/html/%{name}.index %{buildroot}/%{_docdir}/%{name}/
 
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
+
 %post -n libamberwebauthorization -p /sbin/ldconfig
 %postun -n libamberwebauthorization -p /sbin/ldconfig
 
+%files
+%{_datadir}/translations/amber_web_authorization_eng_en.qm
+%{_libdir}/qt5/qml/Amber/Web/Authorization/libamberwebauthorizationplugin.so
+%{_libdir}/qt5/qml/Amber/Web/Authorization/qmldir
+%{_libdir}/qt5/qml/Amber/Web/Authorization/plugins.qmltypes
+%{_libdir}/qt5/qml/Amber/Web/Authorization/*.qml
+%{_libdir}/qt5/qml/Amber/Web/Authorization/*.js
+
+%files ts-devel
+%{_datadir}/translations/source/amber_web_authorization.ts
+
+%files doc
+%dir %{_datadir}/doc/amber-web-authorization
+%{_datadir}/doc/amber-web-authorization/*
+
+%files examples
+%{_bindir}/amberwebauthcppexample
+%{_datadir}/amberwebauthqmlexample/amberwebauthqmlexample.qml
+
+%files -n libamberwebauthorization
+%{_libdir}/libamberwebauthorization.so.*
+
+%files -n libamberwebauthorization-devel
+%{_libdir}/libamberwebauthorization.so
+%{_libdir}/pkgconfig/amberwebauthorization.pc
+%{_includedir}/libamberwebauthorization/*
